@@ -29,9 +29,13 @@ EOT
 
 cat $BP_DIR/export
 
+ln -s $BUILD_DIR/.apt/lib/x86_64-linux-gnu/libaio.so.1t64 $BUILD_DIR/.apt/lib/x86_64-linux-gnu/libaio.so.1
+
 if [ ! -d "$BUILD_DIR/.profile.d" ]; then
   mkdir $BUILD_DIR/.profile.d
 fi
 
 cp $BP_DIR/profile/* $BUILD_DIR/.profile.d/
+
+
 
